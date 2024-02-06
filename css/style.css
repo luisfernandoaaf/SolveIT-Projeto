@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --text-color: #fff;
+    --bg-color: #000;
+    --main-color: #ffa343;
+
+    --h1-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+.logo {
+    font-size: 33px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.header-dir {
+    display: flex;
+    align-items: center;
+}
+
+.header-dir a:first-child {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    margin-right: 20px;
+}
+
+.header-dir a {
+    vertical-align: middle; 
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 18px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+
+.header-dir a:hover {
+    color: var(--main-color);
+    transform: translateY(-3px);
+}
+
+#icone-menu {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+section {
+    padding: 70px 17% 60px;
+}
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(../img/developer.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.texto-home h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--text-color);
+}
+
+.texto-home h1 {
+    font-size: var(--h1-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.texto-home p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block; /*tirar*/
+    padding: 13px 40px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition:  all .50s ease;
+    cursor: pointer;
+}
+
+.botao:hover {
+    transform: translateX(10px);
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+@media (max-width: 1700px) {
+    header {
+        padding: 18px 8%;
+    }
+    section {
+        padding: 50px 8% 40px ;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 14px 5%;
+    }
+    section {
+        padding: 45px 5% 35px ;
+    }
+    :root {
+        --h1-font: 4.6rem;
+        --h2-font: 2.8rem;
+        --p-font: 15px; 
+    }
+    .home {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1050px) {
+    #icone-menu {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        color: #979797;
+        padding: 0;
+        margin: 0px 0px 0px 0px;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    .navbar.open {
+        left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --h1-font: 3.5rem;
+        --h2-font: 2.1rem;
+    }
+    .home {
+        height:  100vh;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        padding: 12px 3%;
+    }
+    section {
+        padding: 60px 3% 50px ;
+    }
+}
